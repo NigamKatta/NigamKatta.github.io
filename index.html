@@ -1,540 +1,783 @@
-    <!doctype html>
+<!doctype html>
 <html lang="en">
 
 <head>
-	  <!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KKH6VE3K25"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	
-	  gtag('config', 'G-KKH6VE3K25');
-	</script>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-Collaborative Robotics on Navigational Platform
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KKH6VE3K25"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KKH6VE3K25');
+  </script>
 
-  <title>Robotics Engineer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nigam Katta · Software & Robotics Engineer</title>
+  <meta name="description" content="Nigam Katta, software engineer at Teradar building terahertz sensor software, ROS 2 middleware, perception and visualization tools.">
+  <meta name="theme-color" content="#16202a">
+  <meta property="og:title" content="Nigam Katta · Software & Robotics Engineer">
+  <meta property="og:description" content="Sensor data pipelines, ROS 2 middleware, perception and robotics.">
+  <meta property="og:image" content="assets/media/hero.webp">
   <link rel="icon" type="image/x-icon" href="assets/emoji_1.png">
 
-
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-    <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-      body {
-        margin: 0;
-        font-family: 'Merriweather', serif;
-        font-size: 15px;
-        line-height: 1.6;
-        color: #333;
+  <!-- Theme before first paint: saved choice, else system preference -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var theme;
+      try { theme = localStorage.getItem('theme'); } catch (e) {}
+      if (theme !== 'dark' && theme !== 'light') {
+        theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       }
+      root.setAttribute('data-theme', theme);
+      root.classList.add('js');
+    })();
+  </script>
 
-      h1 {
-      font-size: 24px;
-      font-weight: bold;
-      border-bottom: 2px solid #000;
-      display: inline-block;
-    }
-    h2 {
-      font-size: 20px;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-    .h2_nik {
-      font-size: 20px;
-      font-weight: bold;
-      margin-top: 30px;
-    }
-    ul {
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
-    li {
-      margin-bottom: 4px;
-    }
-    .li_nik {
-      margin-bottom: 8px;
-      margin-top: 4px;
-    }
-    .degree {
-      font-weight: bold;
-    }
-    .school {
-      font-style: italic;
-    }
-    .date {
-      float: right;
-    } 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #eee;
-  padding: 1rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-}
-
-.header__logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin-right: auto;
-}
-
-.header__nav {
-  display: flex;
-  align-items: center;
-}
-
-.header__nav__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  margin-left: auto;
-}
-
-.header__nav__item {
-  margin-left: 1.5rem;
-}
-
-.header__nav__item:first-child {
-  margin-left: 0;
-}
-
-.header__nav__item a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-      .gpa {
-        font-weight: bold;
-        margin-top: 5px;
-      }
-      .experience {
-      background-color: #f8f8f8;
-      padding: 80px 0;
-      }
-
-      .experience__item {
-        margin-bottom: 30px;
-      }
-
-        .experience__item__title {
-          margin: 0;
-          font-size: 24px;
-          font-weight: bold;
-        }
-
-        .experience__item__meta {
-          margin: 10px 0;
-          font-size: 14px;
-        }
-
-        .experience__item__meta__company {
-          margin-right: 10px;
-        }
-
-        .experience__item__meta__location {
-          margin-right: 10px;
-        }
-
-        .experience__item__meta__date {
-          margin-right: 10px;
-        }
-
-        .experience__item__responsibilities {
-          margin: 0;
-          padding: 0 0 0 20px;
-        }
-
-        .experience__item__responsibilities li {
-          margin-bottom: 10px;
-          font-size: 16px;
-        }
-
-        .competitions {
-          margin-top: 40px;
-        }
-
-        .competitions__list {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-
-        .competitions__item {
-          margin-bottom: 20px;
-        }
-
-        .competitions__title {
-          margin-bottom: 10px;
-          font-size: 24px;
-        }
-
-        .competitions__title_award {
-          margin-bottom: 10px;
-          font-size: 18px;
-        }
-
-        .competitions__description {
-          margin-bottom: 10px;
-          font-size: 15px;
-        }
-
-        .competitions__result_red {
-          font-style: italic;
-          color: #FF0000;
-        }
-        .end {
-          font-size: 15px;
-        }
-        
-        @media (max-width: 767px) {
-			.header {
-				display: none;
-			}
-
-      </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
 
 <body>
-    <header class="header">
-  <div class="header__logo">Nigam Katta</div>
-  <nav class="header__nav">
-    <ul class="header__nav__list">
-      <li class="header__nav__item"><a href="#about-me" class="scroll-to">About Me</a></li>
-      <li class="header__nav__item"><a href="#experience">Experience</a></li>
-      <li class="header__nav__item"><a href="#skills">Skills</a></li>
-      <li class="header__nav__item"><a href="#projects">Projects</a></li>
-      <li class="header__nav__item"><a href="#publications">Publications</a></li>
-      <li class="header__nav__item"><a href="#competitions">Competitions</a></li>
-      <li class="header__nav__item"><a href="#awards">Awards</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M12 7.5l3.5 2v3.5L12 15l-3.5-2V9.5z"/></symbol>
+    <symbol id="i-nodes" viewBox="0 0 24 24"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="5" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M7.3 11l9.4-4.8M7.3 13l9.4 4.8"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+    <symbol id="i-waves" viewBox="0 0 24 24"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M2 9a14.5 14.5 0 0 1 20 0"/><circle cx="12" cy="19.5" r="1"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6M14 4l-4 16"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 2l10 5-10 5L2 7z"/><path d="M2 12l10 5 10-5M2 17l10 5 10-5"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4L3 6.5V20l6-2.5 6 2.5 6-2.5V4l-6 2.5z"/><path d="M9 4v13.5M15 6.5V20"/></symbol>
+    <symbol id="i-window" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M6.5 6.5h.01M9.5 6.5h.01M7 13h6M7 16h10"/></symbol>
+    <symbol id="i-radar" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="M12 12l6.4-6.4"/><circle cx="12" cy="12" r="1"/></symbol>
+  </svg>
 
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="wallpaper" aria-hidden="true"></div>
 
-    <div class="container">
-        <div class="row" style="margin-top: 5em; ">
-            <div class="col-sm-12" style="margin-bottom: 1em;" id="about-me">
-            <h3 class="display-4" style="text-align: center;"><span style="font-weight: bold;">Nigam </span>Katta</h3>
-            </div>
-            <br>
-            
-            <div class="col-md-8" style="">
-                
-                <p>
-                    <span style="font-weight: bold;">Actively looking for Full-Time Roles</span> 
-                    
-                </p>
+  <!-- ======================= NAVBAR ======================= -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="nav-link resume-link" href="https://drive.google.com/file/d/1jQiBqmjmihSH5HeMIQfdEpsj4_dhZ-F1/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+      <div class="nav-links">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link desktop-only" href="#teradar">Teradar</a>
+        <a class="nav-link desktop-only" href="#experience">Experience</a>
+        <a class="nav-link desktop-only" href="#education">Education</a>
+        <a class="nav-link desktop-only" href="#publications">Publications</a>
+        <a class="nav-link desktop-only" href="#projects">Projects</a>
+        <a class="nav-link desktop-only" href="#contact">Contact</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <span class="moon" aria-hidden="true">🌙</span><span class="sun" aria-hidden="true">☀️</span>
+        </button>
+      </div>
+    </nav>
+  </header>
 
-                <p>
-                    <span style="font-weight: bold;">Bio:</span> 
-                    I am currently pursuing my Master's degree in Robotics at <a href="https://www.gatech.edu/" target="_blank">Georgia Institute of Technology</a>, starting from Fall 2022. My current research lies in the field of Object Detection, Localization, tracking and Path generation Algorithms. 
-                </p>
+  <main id="main-content" tabindex="-1">
 
-                <p>
-                    Prior to starting my Master's, I worked as a ADAS Software Engineer at <a href="https://multicorewareinc.com/" target="_blank">Multicoreware Inc</a> in the Autonomous and Automotive business unit. I gained valuable experience in software development for autonomous systems during my time there.
-                </p>
-
-                <p>
-                    My passion for robotics began during my undergraduate studies at <a href="https://amrita.edu/" target="_blank">Amrita University</a>, where I majored in Electronics and Communications. I spent three years working as a student researcher at <a href="https://www.amrita.edu/center/humanitarian-technology-hut-labs/" target="_blank">Humanitarian Technology Labs (HuT Labs) </a>, where I worked on various robotics projects, published research papers, and participated in several competitions.
-                </p>
-
-                <p>
-                    I am excited to continue my academic journey in the field of robotics and make meaningful contributions to the development of autonomous systems. In the future, I hope to explore new and innovative approaches to perception-based robotics and help shape the future of this rapidly-evolving field.
-                </p>
-                
-                <p>For any collaborations, feel free to reach out to me!</p>
-                <p>
-                    <a href="https://drive.google.com/file/d/1jQiBqmjmihSH5HeMIQfdEpsj4_dhZ-F1/view?usp=sharing" target="_blank" style="margin-right: 15px"><i class="fa fa-address-card fa-lg"></i> Resume</a>
-                    <a href="mailto:nigamkatta@gmail.com, nkatta9@gatech.edu" style="margin-right: 15px"><i class="far fa-envelope-open fa-lg"></i> Mail</a>
-                    <a href="https://scholar.google.com/citations?user=WAjjOOwAAAAJ&hl=en" target="_blank" style="margin-right: 15px"><i class="fa-solid fa-book"></i> Scholar</a>
-                    <a href="https://github.com/NigamKatta" target="_blank" style="margin-right: 15px"><i class="fab fa-github fa-lg"></i> Github</a>
-                    <a href="https://www.linkedin.com/in/nigamkatta/" target="_blank" style="margin-right: 15px"><i class="fab fa-linkedin fa-lg"></i> LinkedIn</a>
-                </p>
-    
-            </div>
-            <div class="col-md-4" style="">
-                <img src="assets/img/NigamKatta.jpeg" class="img-thumbnail" width="350px" alt="Profile picture">
-            </div>
+    <!-- ======================= HERO ======================= -->
+    <section class="section" id="home" aria-label="Nigam Katta">
+      <div class="hero">
+        <div class="hero-content">
+          <img class="hero-avatar hero-fade" src="assets/media/avatar.webp" alt="Nigam Katta" width="92" height="92">
+          <h1 class="hero-name hero-fade" style="--fade-delay:0.1s">Hi, I'm Nigam Katta</h1>
+          <p class="hero-role hero-fade" style="--fade-delay:0.2s">
+            I am a <strong class="hero-specialty" id="typewriter" data-words='["Software Engineer", "Robotics Engineer", "Perception Engineer", "ROS 2 Developer"]'>Software Engineer</strong><span class="typewriter-cursor" aria-hidden="true">_</span>
+          </p>
+          <p class="hero-summary hero-fade" style="--fade-delay:0.3s">
+            I build the software that lets sensors and robots see: high-rate data pipelines, ROS 2 middleware, perception, and real-time visualization.
+          </p>
+          <div class="hero-actions hero-fade" style="--fade-delay:0.4s">
+            <a class="primary-btn" href="#teradar">Explore Teradar Work</a>
+            <a class="secondary-btn" href="https://drive.google.com/file/d/1jQiBqmjmihSH5HeMIQfdEpsj4_dhZ-F1/view?usp=sharing" target="_blank" rel="noopener">View Resume</a>
+            <a class="secondary-btn" href="https://www.linkedin.com/in/nigamkatta/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
         </div>
+      </div>
+    </section>
 
+    <!-- ======================= TERADAR ======================= -->
+    <section class="section" id="teradar" aria-labelledby="teradar-heading">
+      <div class="container">
+        <h2 id="teradar-heading" class="fade-in-section">Teradar</h2>
+        <p class="role-subtitle fade-in-section">Software Engineer · Present</p>
+        <p class="section-lead fade-in-section">
+          I build the software around Teradar's terahertz sensors: from ingesting ultra-high-rate streams off the chip, through ROS 2 middleware and research tooling, to perception and real-time systems used in flight tests.
+        </p>
 
-
-        <div class="row" style="margin-top: 3em;">
-            <div class="col-sm-12" style="">
-                <h1>Professional Experience</h1>
-                <h2>Pathwave Measurement Analytics Intern</h2>
-                <div class="date">May 2023 - August 2023</div>
-                <div class="school">Keysight Labs, Atlanta, USA🇺🇸</div>
-                <ul>
-                    <li>Enhanced Keysight PathWave Measurement Analytics backend, optimizing ML-based decision-making processes, resulting in improved efficiency and performance.</li>
-                    <li>Implemented a CPK Process Capability Index feature that enables ML-based statistical analysis for user-input data. This addition significantly enhanced the platform’s adaptability, leading to heightened client interest.</li>
-                    <li>Played a pivotal role in the complex Angular-based frontend development, seamlessly integrating the CPK report UI component, contributing to increased user accessibility and platform usability.</li>                    
-                </ul>
-
-                <h2>Software Engineer (ADAS)</h2>
-                <div class="date">October 2020 - December 2022</div>
-                <div class="school">MulticoreWare Inc, Chennai, India 🇮🇳</div>
-                <ul>
-                    <li>Designed, Developed and Deployed end-to-end neural networks for perception in ADAS, including Object Detection, and Trajectory Prediction. Managed real world custom Datasets, which led to 25% Accuracy boost through transfer learning. </li>
-                    <li>Build CNN architectures, including YOLO, U-Net, and Resnet, using Vectorization, SIMD techniques, for creating a Optimized CNN library for CEVA DSP. Achieved 50% FPS increase while maintaining the accuracy. </li>
-                    <li>Converted Deployed ML models into API's tp facilitate reusability across multiple projects.</li>
-                    <li>Build an end-to-end Multiple Object tracker in Matlab using EKF, JPDA and clustering techniques such as DBSCAN. Applied Sensor fusion techniques to fuse Lidar and Radar Data to create robust sensing of the scene. Achieved 92% real-time acuracy.</li> 
-                </ul>
-                
-                <h2 class="h2_nik">Student Researcher</h2>
-                <div class="date">December 2017 - August 2020</div>
-                <div class="school">Humanitarian Technology Labs in Amrita University, Kerala, India 🇮🇳</div>
-                <ul>
-                    <li>Worked on the software stack for the robotics, which includes Auto-Navigation, Speech Recognition and Computer Vision. Specifically, focused on designing and developing the Computer Vision interface to assist the robotic arm and also while performing auto-navigation.</li>
-                    <li>Implemented Computer Vision algorithms to detect and recognize objects and obstacles in the robot's environment, allowing the robot to navigate safely and efficiently.</li>
-                    <li>Configured and implemented mapping, localization, and pose estimation algorithms using sensor fusion techniques for outdoor and indoor environments. Worked on integrating GPS, LIDAR, and IMU data to create accurate maps and determine the robot's location and orientation in real-time.</li>
-                    <li>Collaborated with cross-functional teams to deliver high-quality software products, including integrating the robot's software with hardware components such as motors and sensors.</li>
-                    <li id="skills">Contributed to research and development of new robotics technologies, including exploring machine learning and AI techniques for object recognition and autonomous decision-making.</li>
-                </ul>
+        <div class="featured-stack">
+          <div class="showcase fade-in-section">
+            <div class="showcase-media">
+              <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Animated radar sweep over a point cloud">
+              <defs><radialGradient id="rg" cx="50%" cy="95%" r="75%"><stop offset="0" stop-color="#12304a"/><stop offset="1" stop-color="#0b1220"/></radialGradient><linearGradient id="sw" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#5eead4" stop-opacity="0.35"/><stop offset="1" stop-color="#5eead4" stop-opacity="0"/></linearGradient></defs>
+              <rect width="600" height="400" fill="url(#rg)"/>
+              <g fill="none" stroke="#5eead4" stroke-opacity="0.18" stroke-width="1">
+              <path d="M220 380A80 80 0 0 1 380 380"/>
+              <path d="M140 380A160 160 0 0 1 460 380"/>
+              <path d="M60 380A240 240 0 0 1 540 380"/>
+              <path d="M-20 380A320 320 0 0 1 620 380"/>
+              <line x1="300" y1="380" x2="628.4" y2="292.0"/>
+              <line x1="300" y1="380" x2="540.4" y2="139.6"/>
+              <line x1="300" y1="380" x2="388.0" y2="51.6"/>
+              <line x1="300" y1="380" x2="212.0" y2="51.6"/>
+              <line x1="300" y1="380" x2="59.6" y2="139.6"/>
+              <line x1="300" y1="380" x2="-28.4" y2="292.0"/>
+              </g>
+              <g fill="#9fb3c8" fill-opacity="0.55" font-family="Montserrat, sans-serif" font-size="11">
+              <text x="384" y="374">10 m</text>
+              <text x="464" y="374">20 m</text>
+              <text x="544" y="374">30 m</text>
+              <text x="624" y="374">40 m</text>
+              </g>
+              <path class="radar-sweep" d="M300 380L217.7 50.1A340 340 0 0 1 300 40Z" fill="url(#sw)"/>
+              <g fill="#5eead4">
+              <circle class="radar-dot" cx="134.5" cy="237.8" r="1.6" style="animation-delay:3.91s"/>
+              <circle class="radar-dot" cx="142.9" cy="250.5" r="2.4" style="animation-delay:3.50s"/>
+              <circle class="radar-dot" cx="133.5" cy="241.5" r="1.6" style="animation-delay:2.51s"/>
+              <circle class="radar-dot" cx="126.5" cy="246.2" r="1.6" style="animation-delay:4.96s"/>
+              <circle class="radar-dot" cx="136.9" cy="259.6" r="1.6" style="animation-delay:3.50s"/>
+              <circle class="radar-dot" cx="150.4" cy="243.5" r="1.6" style="animation-delay:5.86s"/>
+              <circle class="radar-dot" cx="144.6" cy="243.3" r="2.4" style="animation-delay:2.51s"/>
+              <circle class="radar-dot" cx="127.9" cy="244.1" r="1.6" style="animation-delay:4.90s"/>
+              <circle class="radar-dot" cx="122.8" cy="245.3" r="1.6" style="animation-delay:1.13s"/>
+              <circle class="radar-dot" cx="142.6" cy="243.6" r="1.6" style="animation-delay:0.36s"/>
+              <circle class="radar-dot" cx="146.8" cy="235.7" r="2" style="animation-delay:4.66s"/>
+              <circle class="radar-dot" cx="151.8" cy="244.2" r="1.6" style="animation-delay:1.80s"/>
+              <circle class="radar-dot" cx="149.2" cy="250.7" r="2.4" style="animation-delay:3.45s"/>
+              <circle class="radar-dot" cx="144.7" cy="238.0" r="2.4" style="animation-delay:2.69s"/>
+              <circle class="radar-dot" cx="136.8" cy="249.4" r="2" style="animation-delay:2.51s"/>
+              <circle class="radar-dot" cx="123.1" cy="240.7" r="2.4" style="animation-delay:0.24s"/>
+              <circle class="radar-dot" cx="124.6" cy="247.9" r="2" style="animation-delay:4.73s"/>
+              <circle class="radar-dot" cx="132.9" cy="233.0" r="2" style="animation-delay:2.98s"/>
+              <circle class="radar-dot" cx="134.3" cy="246.2" r="2.4" style="animation-delay:1.62s"/>
+              <circle class="radar-dot" cx="144.0" cy="246.8" r="2.4" style="animation-delay:4.21s"/>
+              <circle class="radar-dot" cx="156.1" cy="243.1" r="2.4" style="animation-delay:2.67s"/>
+              <circle class="radar-dot" cx="134.9" cy="226.2" r="2" style="animation-delay:0.14s"/>
+              <circle class="radar-dot" cx="131.7" cy="227.1" r="1.6" style="animation-delay:2.96s"/>
+              <circle class="radar-dot" cx="145.2" cy="250.8" r="2" style="animation-delay:1.49s"/>
+              <circle class="radar-dot" cx="140.4" cy="258.4" r="2" style="animation-delay:1.00s"/>
+              <circle class="radar-dot" cx="159.3" cy="238.0" r="2.4" style="animation-delay:4.92s"/>
+              <circle class="radar-dot" cx="251.1" cy="91.9" r="2" style="animation-delay:2.15s"/>
+              <circle class="radar-dot" cx="246.4" cy="107.0" r="1.6" style="animation-delay:1.06s"/>
+              <circle class="radar-dot" cx="252.5" cy="105.7" r="1.6" style="animation-delay:4.99s"/>
+              <circle class="radar-dot" cx="251.3" cy="103.2" r="2" style="animation-delay:2.51s"/>
+              <circle class="radar-dot" cx="258.9" cy="109.8" r="2.4" style="animation-delay:0.75s"/>
+              <circle class="radar-dot" cx="239.3" cy="112.2" r="2" style="animation-delay:4.44s"/>
+              <circle class="radar-dot" cx="240.7" cy="119.0" r="2.4" style="animation-delay:5.25s"/>
+              <circle class="radar-dot" cx="257.9" cy="95.5" r="2.4" style="animation-delay:0.62s"/>
+              <circle class="radar-dot" cx="255.8" cy="98.9" r="2" style="animation-delay:5.91s"/>
+              <circle class="radar-dot" cx="245.0" cy="96.0" r="1.6" style="animation-delay:0.32s"/>
+              <circle class="radar-dot" cx="263.1" cy="108.6" r="2.4" style="animation-delay:5.69s"/>
+              <circle class="radar-dot" cx="231.2" cy="104.6" r="1.6" style="animation-delay:3.68s"/>
+              <circle class="radar-dot" cx="270.0" cy="124.1" r="2" style="animation-delay:3.61s"/>
+              <circle class="radar-dot" cx="234.4" cy="91.1" r="2" style="animation-delay:5.96s"/>
+              <circle class="radar-dot" cx="259.5" cy="101.7" r="2.4" style="animation-delay:0.86s"/>
+              <circle class="radar-dot" cx="254.3" cy="95.8" r="1.6" style="animation-delay:4.97s"/>
+              <circle class="radar-dot" cx="258.0" cy="104.0" r="2" style="animation-delay:5.71s"/>
+              <circle class="radar-dot" cx="241.7" cy="93.9" r="2.4" style="animation-delay:0.16s"/>
+              <circle class="radar-dot" cx="378.6" cy="236.4" r="2" style="animation-delay:0.55s"/>
+              <circle class="radar-dot" cx="377.3" cy="254.4" r="1.6" style="animation-delay:2.13s"/>
+              <circle class="radar-dot" cx="375.1" cy="254.2" r="1.6" style="animation-delay:1.98s"/>
+              <circle class="radar-dot" cx="369.7" cy="260.3" r="1.6" style="animation-delay:4.55s"/>
+              <circle class="radar-dot" cx="360.1" cy="261.7" r="1.6" style="animation-delay:4.44s"/>
+              <circle class="radar-dot" cx="374.1" cy="237.0" r="1.6" style="animation-delay:4.39s"/>
+              <circle class="radar-dot" cx="364.3" cy="256.7" r="2.4" style="animation-delay:1.16s"/>
+              <circle class="radar-dot" cx="365.0" cy="248.1" r="2" style="animation-delay:5.62s"/>
+              <circle class="radar-dot" cx="365.7" cy="248.1" r="1.6" style="animation-delay:1.32s"/>
+              <circle class="radar-dot" cx="374.7" cy="248.0" r="2.4" style="animation-delay:2.90s"/>
+              <circle class="radar-dot" cx="363.7" cy="254.9" r="2.4" style="animation-delay:3.92s"/>
+              <circle class="radar-dot" cx="368.8" cy="238.3" r="2.4" style="animation-delay:5.46s"/>
+              <circle class="radar-dot" cx="365.1" cy="257.6" r="2.4" style="animation-delay:1.07s"/>
+              <circle class="radar-dot" cx="381.5" cy="235.8" r="2" style="animation-delay:5.83s"/>
+              <circle class="radar-dot" cx="378.5" cy="247.7" r="1.6" style="animation-delay:0.51s"/>
+              <circle class="radar-dot" cx="371.6" cy="243.0" r="2" style="animation-delay:0.91s"/>
+              <circle class="radar-dot" cx="367.2" cy="251.8" r="2" style="animation-delay:4.96s"/>
+              <circle class="radar-dot" cx="368.6" cy="255.4" r="1.6" style="animation-delay:3.29s"/>
+              <circle class="radar-dot" cx="364.5" cy="241.9" r="1.6" style="animation-delay:4.36s"/>
+              <circle class="radar-dot" cx="377.1" cy="255.8" r="1.6" style="animation-delay:2.60s"/>
+              <circle class="radar-dot" cx="366.4" cy="252.3" r="2" style="animation-delay:1.51s"/>
+              <circle class="radar-dot" cx="376.8" cy="251.3" r="2.4" style="animation-delay:1.96s"/>
+              <circle class="radar-dot" cx="528.7" cy="228.0" r="2" style="animation-delay:5.46s"/>
+              <circle class="radar-dot" cx="498.8" cy="221.7" r="2.4" style="animation-delay:4.89s"/>
+              <circle class="radar-dot" cx="552.7" cy="239.3" r="2.4" style="animation-delay:3.01s"/>
+              <circle class="radar-dot" cx="529.4" cy="206.6" r="1.6" style="animation-delay:5.24s"/>
+              <circle class="radar-dot" cx="514.7" cy="251.2" r="1.6" style="animation-delay:0.90s"/>
+              <circle class="radar-dot" cx="537.4" cy="241.6" r="2" style="animation-delay:3.34s"/>
+              <circle class="radar-dot" cx="508.4" cy="242.2" r="1.6" style="animation-delay:2.89s"/>
+              <circle class="radar-dot" cx="515.7" cy="224.6" r="1.6" style="animation-delay:1.15s"/>
+              <circle class="radar-dot" cx="502.5" cy="235.5" r="1.6" style="animation-delay:3.37s"/>
+              <circle class="radar-dot" cx="538.5" cy="235.9" r="2.4" style="animation-delay:3.03s"/>
+              <circle class="radar-dot" cx="530.3" cy="214.2" r="2" style="animation-delay:3.05s"/>
+              <circle class="radar-dot" cx="526.6" cy="234.3" r="2" style="animation-delay:3.14s"/>
+              <circle class="radar-dot" cx="491.5" cy="215.8" r="2" style="animation-delay:1.22s"/>
+              <circle class="radar-dot" cx="524.1" cy="217.2" r="1.6" style="animation-delay:2.65s"/>
+              <circle class="radar-dot" cx="511.2" cy="240.3" r="2" style="animation-delay:1.28s"/>
+              <circle class="radar-dot" cx="487.2" cy="242.2" r="2.4" style="animation-delay:0.93s"/>
+              <circle class="radar-dot" cx="514.6" cy="239.5" r="1.6" style="animation-delay:1.52s"/>
+              <circle class="radar-dot" cx="513.4" cy="218.8" r="2" style="animation-delay:5.72s"/>
+              <circle class="radar-dot" cx="511.8" cy="224.2" r="1.6" style="animation-delay:4.01s"/>
+              <circle class="radar-dot" cx="529.6" cy="209.0" r="2" style="animation-delay:3.09s"/>
+              <circle class="radar-dot" cx="534.4" cy="230.5" r="2" style="animation-delay:0.55s"/>
+              <circle class="radar-dot" cx="512.6" cy="209.1" r="1.6" style="animation-delay:2.64s"/>
+              <circle class="radar-dot" cx="540.4" cy="228.0" r="1.6" style="animation-delay:1.77s"/>
+              <circle class="radar-dot" cx="526.6" cy="189.2" r="1.6" style="animation-delay:1.37s"/>
+              <circle class="radar-dot" cx="240.4" cy="272.2" r="1.6" style="animation-delay:5.44s"/>
+              <circle class="radar-dot" cx="241.9" cy="270.3" r="2.4" style="animation-delay:2.53s"/>
+              <circle class="radar-dot" cx="245.5" cy="279.4" r="2.4" style="animation-delay:0.90s"/>
+              <circle class="radar-dot" cx="249.5" cy="277.1" r="1.6" style="animation-delay:0.54s"/>
+              <circle class="radar-dot" cx="245.5" cy="278.6" r="2" style="animation-delay:5.37s"/>
+              <circle class="radar-dot" cx="242.6" cy="279.5" r="1.6" style="animation-delay:4.81s"/>
+              <circle class="radar-dot" cx="246.7" cy="276.5" r="1.6" style="animation-delay:1.59s"/>
+              <circle class="radar-dot" cx="244.9" cy="271.1" r="2" style="animation-delay:3.32s"/>
+              <circle class="radar-dot" cx="245.0" cy="275.2" r="1.6" style="animation-delay:4.26s"/>
+              <circle class="radar-dot" cx="242.4" cy="276.1" r="2" style="animation-delay:1.09s"/>
+              <circle class="radar-dot" cx="249.0" cy="279.3" r="2" style="animation-delay:1.24s"/>
+              <circle class="radar-dot" cx="245.2" cy="273.2" r="1.6" style="animation-delay:2.08s"/>
+              <circle class="radar-dot" cx="333.8" cy="182.9" r="2.4" style="animation-delay:0.11s"/>
+              <circle class="radar-dot" cx="336.6" cy="184.6" r="2" style="animation-delay:2.85s"/>
+              <circle class="radar-dot" cx="330.8" cy="175.4" r="2" style="animation-delay:2.59s"/>
+              <circle class="radar-dot" cx="340.9" cy="187.9" r="2" style="animation-delay:5.82s"/>
+              <circle class="radar-dot" cx="335.4" cy="199.2" r="2.4" style="animation-delay:2.06s"/>
+              <circle class="radar-dot" cx="334.4" cy="186.3" r="1.6" style="animation-delay:5.94s"/>
+              <circle class="radar-dot" cx="334.3" cy="183.8" r="2" style="animation-delay:3.75s"/>
+              <circle class="radar-dot" cx="335.9" cy="182.4" r="2" style="animation-delay:3.99s"/>
+              <circle class="radar-dot" cx="330.2" cy="188.9" r="1.6" style="animation-delay:1.69s"/>
+              <circle class="radar-dot" cx="334.8" cy="184.8" r="2" style="animation-delay:1.11s"/>
+              <circle cx="318.0" cy="265.1" r="1.2" fill-opacity="0.3"/>
+              <circle cx="-12.1" cy="300.6" r="1.2" fill-opacity="0.3"/>
+              <circle cx="285.1" cy="270.1" r="1.2" fill-opacity="0.3"/>
+              <circle cx="173.9" cy="349.4" r="1.2" fill-opacity="0.3"/>
+              <circle cx="316.1" cy="343.0" r="1.2" fill-opacity="0.3"/>
+              <circle cx="359.0" cy="212.5" r="1.2" fill-opacity="0.3"/>
+              <circle cx="299.2" cy="281.7" r="1.2" fill-opacity="0.3"/>
+              <circle cx="299.4" cy="338.6" r="1.2" fill-opacity="0.3"/>
+              <circle cx="341.3" cy="328.5" r="1.2" fill-opacity="0.3"/>
+              <circle cx="314.8" cy="330.1" r="1.2" fill-opacity="0.3"/>
+              <circle cx="425.6" cy="354.0" r="1.2" fill-opacity="0.3"/>
+              <circle cx="445.3" cy="228.6" r="1.2" fill-opacity="0.3"/>
+              <circle cx="278.5" cy="123.2" r="1.2" fill-opacity="0.3"/>
+              <circle cx="192.1" cy="157.1" r="1.2" fill-opacity="0.3"/>
+              <circle cx="164.7" cy="308.6" r="1.2" fill-opacity="0.3"/>
+              <circle cx="455.4" cy="93.9" r="1.2" fill-opacity="0.3"/>
+              <circle cx="510.8" cy="245.6" r="1.2" fill-opacity="0.3"/>
+              <circle cx="279.0" cy="331.7" r="1.2" fill-opacity="0.3"/>
+              <circle cx="55.4" cy="208.6" r="1.2" fill-opacity="0.3"/>
+              <circle cx="209.9" cy="143.8" r="1.2" fill-opacity="0.3"/>
+              <circle cx="237.3" cy="329.6" r="1.2" fill-opacity="0.3"/>
+              <circle cx="287.3" cy="194.2" r="1.2" fill-opacity="0.3"/>
+              <circle cx="76.3" cy="222.9" r="1.2" fill-opacity="0.3"/>
+              <circle cx="131.6" cy="255.5" r="1.2" fill-opacity="0.3"/>
+              <circle cx="85.3" cy="277.2" r="1.2" fill-opacity="0.3"/>
+              <circle cx="243.9" cy="289.2" r="1.2" fill-opacity="0.3"/>
+              <circle cx="376.5" cy="362.2" r="1.2" fill-opacity="0.3"/>
+              <circle cx="327.3" cy="315.1" r="1.2" fill-opacity="0.3"/>
+              <circle cx="134.4" cy="264.4" r="1.2" fill-opacity="0.3"/>
+              <circle cx="220.8" cy="173.0" r="1.2" fill-opacity="0.3"/>
+              <circle cx="210.1" cy="221.9" r="1.2" fill-opacity="0.3"/>
+              <circle cx="568.3" cy="339.7" r="1.2" fill-opacity="0.3"/>
+              <circle cx="178.8" cy="239.1" r="1.2" fill-opacity="0.3"/>
+              <circle cx="276.7" cy="150.0" r="1.2" fill-opacity="0.3"/>
+              <circle cx="540.1" cy="298.1" r="1.2" fill-opacity="0.3"/>
+              <circle cx="340.1" cy="333.3" r="1.2" fill-opacity="0.3"/>
+              <circle cx="456.4" cy="183.0" r="1.2" fill-opacity="0.3"/>
+              <circle cx="490.2" cy="210.8" r="1.2" fill-opacity="0.3"/>
+              <circle cx="120.7" cy="342.0" r="1.2" fill-opacity="0.3"/>
+              <circle cx="359.0" cy="211.1" r="1.2" fill-opacity="0.3"/>
+              <circle cx="168.3" cy="153.0" r="1.2" fill-opacity="0.3"/>
+              <circle cx="225.6" cy="166.2" r="1.2" fill-opacity="0.3"/>
+              <circle cx="377.4" cy="350.7" r="1.2" fill-opacity="0.3"/>
+              <circle cx="465.5" cy="185.3" r="1.2" fill-opacity="0.3"/>
+              <circle cx="408.7" cy="206.6" r="1.2" fill-opacity="0.3"/>
+              <circle cx="356.7" cy="370.0" r="1.2" fill-opacity="0.3"/>
+              <circle cx="444.4" cy="194.7" r="1.2" fill-opacity="0.3"/>
+              <circle cx="176.6" cy="178.9" r="1.2" fill-opacity="0.3"/>
+              <circle cx="407.0" cy="223.2" r="1.2" fill-opacity="0.3"/>
+              <circle cx="317.7" cy="205.7" r="1.2" fill-opacity="0.3"/>
+              <circle cx="565.5" cy="242.2" r="1.2" fill-opacity="0.3"/>
+              <circle cx="545.5" cy="169.0" r="1.2" fill-opacity="0.3"/>
+              <circle cx="257.2" cy="365.7" r="1.2" fill-opacity="0.3"/>
+              <circle cx="332.5" cy="104.1" r="1.2" fill-opacity="0.3"/>
+              <circle cx="134.2" cy="341.0" r="1.2" fill-opacity="0.3"/>
+              <circle cx="362.0" cy="300.5" r="1.2" fill-opacity="0.3"/>
+              <circle cx="203.3" cy="350.6" r="1.2" fill-opacity="0.3"/>
+              <circle cx="281.3" cy="301.1" r="1.2" fill-opacity="0.3"/>
+              <circle cx="278.2" cy="64.5" r="1.2" fill-opacity="0.3"/>
+              <circle cx="541.2" cy="242.1" r="1.2" fill-opacity="0.3"/>
+              </g>
+              <circle cx="300" cy="380" r="5" fill="#5eead4"/><circle cx="300" cy="380" r="12" fill="none" stroke="#5eead4" stroke-opacity="0.4"/>
+              </svg>
             </div>
-        </div>
-
-        <div class="row" style="margin-top: 3em;">
-            <div class="col-sm-12" style="">
-                <h1>Skills</h1>
-
-                <div class="row">
-                <div class="col-md-6">
-                  <ul class="skills-list">
-                    <li class="li_nik">Python</li>
-                    <li class="li_nik">C++</li>
-                    <li class="li_nik">Deep Learning</li>
-                    <li class="li_nik">Machine Learning</li>
-                    <li class="li_nik">CUDA</li>
-                    <li class="li_nik" id="projects">Embedded Systems</li>
-                  </ul>
-                </div>
-                <div class="col-md-6">
-                  <ul class="skills-list">
-                    <li class="li_nik">Computer Vision</li>
-                    <li class="li_nik">SLAM (Simultaneous Localization and Mapping)</li>
-                    <li class="li_nik">PyTorch</li>
-                    <li class="li_nik">Multi-Threading</li>
-                    <li class="li_nik">Matlab</li>
-                    <li class="li_nik">ROS (Robot Operating System), ROS2</li>
-                  </ul>
-                </div>
+            <div class="showcase-copy">
+              <span class="eyebrow-pill">Terahertz sensing</span>
+              <h3>From chip to point cloud</h3>
+              <p>Low-latency C++ ingestion libraries, secure ROS 2 streaming with MCAP archival, a C++/Qt research suite that renders live 3D point clouds, and the perception tooling that feeds CV/DL model training.</p>
+              <div class="tag-row">
+                <span class="tag">C++</span><span class="tag">Qt</span><span class="tag">ROS 2</span><span class="tag">MCAP</span><span class="tag">Point clouds</span><span class="tag">Radar imaging</span>
               </div>
             </div>
+          </div>
+
+          <div class="case-grid">
+            <article class="case-card fade-in-section">
+              <div class="case-banner"><span class="case-category">Data architecture</span><svg class="icon"><use href="#i-chip"/></svg></div>
+              <div class="case-body">
+                <h3>High-Throughput Sensor Data Architecture</h3>
+                <p>Architected foundational C++ hardware-to-software data ingestion libraries, optimizing memory allocation and data transport pipelines to handle ultra-high-rate terahertz streams with low latency.</p>
+                <div class="tag-row"><span class="tag">C++</span><span class="tag">Memory allocation</span><span class="tag">Low latency</span></div>
+              </div>
+            </article>
+            <article class="case-card fade-in-section">
+              <div class="case-banner"><span class="case-category">Tooling</span><svg class="icon"><use href="#i-monitor"/></svg></div>
+              <div class="case-body">
+                <h3>Custom Engineering &amp; Visualization Tooling</h3>
+                <p>Built a full-featured desktop research and visualization suite in C++/Qt from scratch, used by cross-functional teams to process real-time sensor streams, render 3D point clouds, and validate hardware chip states.</p>
+                <div class="tag-row"><span class="tag">C++</span><span class="tag">Qt</span><span class="tag">3D point clouds</span></div>
+              </div>
+            </article>
+            <article class="case-card fade-in-section">
+              <div class="case-banner"><span class="case-category">Middleware</span><svg class="icon"><use href="#i-nodes"/></svg></div>
+              <div class="case-body">
+                <h3>Robotics Middleware &amp; Data Infrastructure</h3>
+                <p>Designed secure, high-rate ROS 2 streaming protocols for continuous point-cloud telemetry, and implemented data offload and archival pipelines using MCAP.</p>
+                <div class="tag-row"><span class="tag">ROS 2</span><span class="tag">MCAP</span><span class="tag">Telemetry</span></div>
+              </div>
+            </article>
+            <article class="case-card fade-in-section">
+              <div class="case-banner"><span class="case-category">Perception</span><svg class="icon"><use href="#i-eye"/></svg></div>
+              <div class="case-body">
+                <h3>Computer Vision, Signal Processing &amp; Deep Learning</h3>
+                <p>Implemented point-cloud and radar image overlay techniques, developed optimized super-resolution algorithms, and built custom annotation tools to accelerate CV/DL model training workflows.</p>
+                <div class="tag-row"><span class="tag">Sensor overlay</span><span class="tag">Super-resolution</span><span class="tag">Annotation tools</span></div>
+              </div>
+            </article>
+            <article class="case-card fade-in-section">
+              <div class="case-banner"><span class="case-category">Avionics</span><svg class="icon"><use href="#i-plane"/></svg></div>
+              <div class="case-body">
+                <h3>Real-Time Avionics &amp; Visual Assistance Systems</h3>
+                <p>Engineered real-time radar rendering pipelines and orchestration infrastructure to support pilots operating in Degraded Visual Environments (DVE) during flight-test collections.</p>
+                <div class="tag-row"><span class="tag">Real-time rendering</span><span class="tag">DVE</span><span class="tag">Flight test</span></div>
+              </div>
+            </article>
+            <article class="case-card fade-in-section">
+              <div class="case-banner"><span class="case-category">Communications</span><svg class="icon"><use href="#i-waves"/></svg></div>
+              <div class="case-body">
+                <h3>Terahertz Wireless Communications &amp; Tactical Systems</h3>
+                <p>Developed terahertz vehicle-to-vehicle (V2V) and tactical communication software, integrating On-Off Keying (OOK) modulation protocols, custom algorithm orchestration, and tightly coupled hardware-software control.</p>
+                <div class="tag-row"><span class="tag">V2V</span><span class="tag">OOK modulation</span><span class="tag">HW/SW control</span></div>
+              </div>
+            </article>
+          </div>
         </div>
+      </div>
+    </section>
 
+    <!-- ======================= EXPERIENCE ======================= -->
+    <section class="section" id="experience" aria-labelledby="experience-heading">
+      <div class="container">
+        <h2 id="experience-heading" class="fade-in-section">Previous Experience</h2>
+        <div class="card-grid" data-group="experience">
 
-
-
-
-
-
-        <div class="row" style="margin-top: 3em;">
-                    <div class="col-sm-15" style="">
-                        <h1>Projects</h1>
-
-			<div style="margin-bottom: 3em; margin-top: 1em;"> <div class="row"><div class="col-sm-5"><img src="assets/Lab6Demo.gif" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-7"><a href="" target="_blank"> SVM Classifier Based PID-Controlled Navigation of Turtlebot in a MAZE</a><br>As a part of the Robotics research course (7785) at Georgia Tech, I developed algorithms using Python3, ROS2 and Gazebo to help the Turtlebot3 robot perform tasks like following an object, avoiding obstacles and navigating to waypoints, path planning with Navstack and maneuvering an obstacle course.<br></div> </div> </div>
-			  
-                        <div style="margin-bottom: 3em; margin-top: 1em;"> <div class="row"><div class="col-sm-5"><img src="assets/img/publications/digi.png" class="img-fluid img-thumbnail" alt="Project image" width="300" height="200"></div><div class="col-sm-7"><a href="" target="_blank">Enhancing Human-Robot Interaction: Navigational Capabilities of Digit in Dynamic Environments</a><br>This research project, conducted within the LIDAR research group at Georgia Tech under the guidance of Dr. Ye Zhao, focuses on enhancing the navigational capabilities of the humanoid robot Digit in dynamic environments. The primary objective is to enable Digit to navigate safely among humans while avoiding collisions. To achieve this, advanced computer vision techniques are employed, leveraging the Vicon Mocap system to detect the presence and movements of humans in the robot's vicinity. Additionally, a Zonotope-based model-predictive controller is utilized to plan Digit's trajectory in real-time, ensuring optimal navigation while adhering to safety constraints. By integrating these cutting-edge technologies, the project aims to significantly enhance the efficacy and safety of human-robot interaction scenarios, paving the way for Digit's seamless integration into diverse real-world environments.<br></div> </div> </div>
-			    
-			<div style="margin-bottom: 3em; margin-top: 1em;"> <div class="row"><div class="col-sm-5"><img src="assets/img/publications/3d_map_2d_lidar.gif" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-7"><a href="https://github.com/GutlapalliNikhil/3D-Mapping-Using-2D-LiDAR-ROS" target="_blank">Simulating and Mapping 3D Environments with 2D Lidar in ROS </a><br>In this project, we harnessed the synergy of 2D Lidar, ROS, and Gazebo to pioneer 3D mapping. Our journey began with crafting a dynamic robot in SolidWorks, boasting a Lidar poised to scan from 0 to +60 degrees. A bespoke Lidar plugin orchestrated data collection, translating laser scans into intricate point clouds. Augmented by the octomap library, these clouds unfurled into vivid 3D maps. This venture not only showcases technical finesse but also exemplifies the potential of autonomous spatial understanding.<br><a href="https://github.com/GutlapalliNikhil/3D-Mapping-Using-2D-LiDAR-ROS" target="_blank">Code</a></div> </div> </div>
-			    
-                        <div style="margin-bottom: 3em; margin-top: 1em;"> <div class="row"><div class="col-sm-5"><img src="assets/img/publications/3D_detection.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-7"><a href="https://github.com/GutlapalliNikhil/Complex-YOLO-ROS-3D-Object-Detection" target="_blank">Complex YOLO-ROS 3D Object-Detection </a><br>The Complex YOLO ROS 3D Object Detection project is an integration of the Complex YOLOv4 package into the ROS (Robot Operating System) platform, aimed at enhancing real-time perception capabilities for robotics applications. Using 3D object detection techniques based on Lidar data, the project enables robots and autonomous systems to accurately detect and localize objects in a 3D environment, crucial for safe navigation, obstacle avoidance, and intelligent decision-making.<br><a href="https://github.com/GutlapalliNikhil/Complex-YOLO-ROS-3D-Object-Detection" target="_blank">Code</a></div> </div> </div>
-			    
-                        <div style="margin-bottom: 3em; margin-top: 1em;"> <div class="row"><div class="col-sm-5"><img src="assets/img/publications/pointcloud_Classification.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-7"><a href="https://github.com/GutlapalliNikhil/Pointcloud-Classification-Pytorch" target="_blank">Point Cloud Classification using PyTorch. </a><br>The Point Cloud Classification project implements the PointNet architecture for classifying 3D point clouds. It supports two datasets, ModelNet and ScanObjectNN, and provides functions for dataset preprocessing, model training, and visualization. The project aims to classify point clouds into different categories using deep learning techniques, enabling applications in object recognition, scene understanding, and robotics. The command-line interface allows easy configuration and training of the model.<br><a href="https://github.com/GutlapalliNikhil/Pointcloud-Classification-Pytorch" target="_blank">Code</a></div> </div> </div>
-
-			<div style="margin-bottom: 3em; margin-top: 1em;"> <div class="row"><div class="col-sm-5"><img src="assets/img/publications/ScorpionImage.jpeg" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-7"><a href="https://www.youtube.com/watch?v=qSWeLO4bYwI" target="_blank">Autonomous Search and rescue Robot</a><br>I have extensive experience in the design and development of autonomous systems, with a focus on search and rescue robotics. I have led a software team in the creation of a multi-functional rescue robot, integrating various modules and algorithms using ROS as a framework. My responsibilities included control architecture design, 2D/3D SLAM algorithm implementation, control of robotics arm and GUI development. I also used machine learning and CNN models to add features such as hazardous sign detection, fire detection, and person detection, as well as integrating a robotic arm with pick and place capabilities. I am skilled in various programming languages and have a strong ability to troubleshoot and problem-solve. give me a project description in a short one paragraph.<br><a href="https://github.com/NigamKatta/RescueRobot/tree/main" target="_blank">Code</a></div> </div> </div>
-			    
-                        <div style="margin-bottom: 3em; margin-top: 1em;"> <div class="row"><div class="col-sm-5"><img src="assets/img/publications/image_classification.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-7"><a href="https://github.com/GutlapalliNikhil/ImageClassification_VIT_TransferLearning" target="_blank">Custom Image Classification using Pretrained Transformer Model (ViT)</a><br>For my custom image classification project, I utilized a pretrained transformer model to achieve accurate results. By fine-tuning the model during the training phase and evaluating its performance during validation, I successfully adapted it to my specific image classification task. The pretrained transformer model's ability to capture intricate features and patterns in images proved highly effective in achieving high classification accuracy.<br><a href="https://github.com/GutlapalliNikhil/ImageClassification_VIT_TransferLearning" target="_blank">Code</a></div> </div> </div>
-
-			<div style="margin-bottom: 3em; margin-top: 1em;"> <div class="row"><div class="col-sm-5"><img src="assets/img/publications/collaborative_SLAM.gif" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-7"><a href="https://github.com/GutlapalliNikhil/GutlapalliNikhil.github.io/blob/main/files/Group4_FinalReport-3.pdf" target="_blank">Collaborative SLAM using Multi-Robot System</a><br>Developed a novel approach to collaborative Simultaneous Localization and Mapping (SLAM) by utilizing a multi-robot system. The experiment employed two turtlebot3 robots operating in a simulated gazebo environment, with ROS serving as the platform for seamless integration. Leveraging the gmapping algorithm, we achieved highly precise mapping of the environment. Additionally, we equipped each robot with autonomous exploration capabilities using explore lite. The maps generated by the robots were skillfully merged using the multirobot map merger, resulting in a comprehensive and detailed representation of the environment.<br><a href="https://github.com/GutlapalliNikhil/GutlapalliNikhil.github.io/blob/main/files/Group4_FinalReport-3.pdf" target="_blank">Project Report</a> / <a href="https://github.com/GutlapalliNikhil/Collaborative_SLAM" target="_blank">Code</a> / <a href="https://www.youtube.com/watch?v=Mosx_JfMLIQ" target="_blank">Demo Video</a> / <a href="https://github.com/GutlapalliNikhil/GutlapalliNikhil.github.io/blob/main/files/Collaborative_SLAM.pdf" target="_blank">Slides</a></div> </div> </div>
-
-                        <div style="margin-bottom: 3em; margin-top: 1em;"> <div class="row"><div class="col-sm-5"><img src="assets/sTETRO.gif" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-7"><a href="https://github.com/NigamKatta/sTETRO/tree/main" target="_blank">sTetro: Revolutionizing Staircase-Cleaning Robotics</a><br> I played a key role in making sTetro, a cool robot that's changing how cleaning gets done. I focused on creating its brain - the staircase motion controller. It's smart and uses sensors to make decisions while moving around. I also made sure it can handle different surfaces smoothly by setting up the encoder and IMU-based PID controller. Then, I used fancy tech like Deep CNN and YOLO-v3 to help sTetro spot stairs accurately and climb them by itself. These cool tricks were added into sTetro's software, making it a super-efficient cleaner. Check out my work on GitHub to see how sTetro is shaking up the cleaning game!"<br></div> </div> </div>
-
-                        <div style="margin-bottom: 3em; margin-top: 1em;"> <div class="row"><div class="col-sm-5"><img src="assets/Screenshot from 2024-03-18 21-52-01.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-7"><a href="" target="_blank">State Estimation using Kalman family</a><br>In pursuit of upskilling within the realm of state estimation, I have undertaken a comprehensive project focusing on the design and implementation of Kalman filter variants to address various state estimation challenges. This endeavor encompasses the development and testing of Kalman filters employing distinct motion models, including Constant Velocity, Constant Acceleration, and Constant Velocity and Heading models. Each model has been rigorously evaluated using simulated sensor data to assess its efficacy in accurately estimating the state of dynamic systems. By simulating sensor data and integrating it into the measurement update step, this project aims to deepen understanding and proficiency in Kalman filtering techniques while fostering practical expertise in addressing real-world state estimation problems.<br></div> </div> </div>
-
-                        <div style="margin-bottom: 3em; margin-top: 1em;"> <div class="row"><div class="col-sm-5"><img src="assets/img/publications/chetak.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-7"><b>CHETAK 🐎 - The Home Service Robot</b><br>CHETAK is a self-governing home assistance robot designed to support individuals with disabilities and impairments with their daily life activities. It features an advanced and cost-effective infrastructure with Object Vision, Speech Recognition, Autonomous Navigation with Obstacle Avoidance, and a 6 Degree of Freedom Robotic Arm, making it a sophisticated service robot. The robot can differentiate among objects based on class and can anticipate qualities like Gender, Age, and Posture. It can receive commands from a person and perform tasks autonomously, either through manual or autonomous navigation, choosing the shortest path while avoiding dynamic obstacles and navigating through extended waypoints. CHETAK uses the robotic arm with end-effector and vision information to pick and place objects. The whole system is implemented using Robot Operating System(ROS) on Ubuntu platform to integrate individual nodes for complex operations. CHETAK can perform Human-Robot interaction, Object Manipulation, and Gesture recognition, helping the disabled and physically handicapped people by serving drinks, fruits, etc., and visually impaired people by finding objects or people and serving them.<br><a href="https://github.com/GutlapalliNikhil/Install_Speech_Navigation" target="_blank">Code</a> / <a href="https://amrita.edu/project/service-robot" target="_blank">More Info </a> / <a href="https://www.youtube.com/watch?v=1iNSb_AOZIM" target="_blank"> Demo Video - 1</a> / <a href="https://www.youtube.com/watch?v=L7wPotpw4lE" target="_blank" id="publications"> Demo Video - 2</a></div> </div> </div>
-
+          <article class="card fade-in-section">
+            <div class="card-media logo-media"><img src="assets/media/logos/keysight.svg" alt="Keysight logo" loading="lazy"></div>
+            <div class="card-content">
+              <p class="card-meta">May 2023 – Aug 2023</p>
+              <h3>PathWave Measurement Analytics Intern</h3>
+              <p>ML-based analytics backend, a CPK process-capability feature, and its Angular report UI.</p>
+              <button class="dark-btn explore-btn" type="button">Explore</button>
             </div>
-        </div>
+            <template class="modal-data" data-role="PathWave Measurement Analytics Intern" data-org="Keysight Labs · Atlanta, USA" data-date="May 2023 – Aug 2023">
+              <p>Internship on Keysight's PathWave Measurement Analytics platform, across the ML backend and the Angular frontend.</p>
+              <li>Enhanced the PathWave Measurement Analytics backend, optimizing ML-based decision-making for better efficiency and performance.</li>
+              <li>Implemented a CPK (Process Capability Index) feature that enables ML-based statistical analysis of user-input data, making the platform more adaptable and drawing client interest.</li>
+              <li>Built and integrated the CPK report UI component into the Angular frontend, improving accessibility and usability.</li>
+            </template>
+          </article>
 
-        <div class="row" style="margin-top: 1em;">
-            <div class="col-sm-12" style="">
-                <h1 style="margin-bottom: 2em">Publications</h1>
-                <div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/system_arch.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://drive.google.com/file/d/1yw3w5XYo1P_WNr17WLIt4v1qVvOI0_dc/view?usp=sharing" target="_blank">Robot Operating System based Autonomous Navigation Platform with Human-Robot Interaction</a> <br><a href="https://www.amrita.edu/faculty/rajeshm/" target="_blank">Rajesh Kannan Megalingam</a>, <a href="https://www.linkedin.com/in/ravitejageesala/?originalSubdomain=in" target="_blank">Raviteja Geesala</a>, <a href="https://www.linkedin.com/in/ruthvikchanda/" target="_blank">Ruthvik Rangaiagh Chanda</a>, <a href="https://www.linkedin.com/in/nigamkatta/" target="_blank">Nigam Katta</a>,  <br><span style="font-style: italic;">Advances in Science, Technology and Engineering Systems Journal (ASTESJ)</span>, 2020 <br><a href="https://drive.google.com/file/d/1yw3w5XYo1P_WNr17WLIt4v1qVvOI0_dc/view?usp=sharing" target="_blank">Paper</a> /<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#1" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="1"><div class="card card-body"><pre><code>@InProceedings{author = {Rajesh Kannan Megalingam, Ravi Teja Geesala, Ruthvik Rangaiah Chanda, Nigam Katta}, 
-            title = {Multimode Control and Simulation of 6-DOF Robotic Arm in ROS}, 
-            booktitle = {Advances in Science, Technology and Engineering Systems Journal (ASTESJ)}, 
-            year = {2020}, 
-        }</pre></code></div></div> </div> </div> </div>
-
-
-            <div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/p2ss.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://drive.google.com/file/d/19DK3Tah7GFJEDjP5nSMqoTnaB_ZEV84S/view?usp=sharing" target="_blank">Implementation of low-cost mobile robot for rescue challenges</a> <br><a href="https://www.amrita.edu/faculty/rajeshm/" target="_blank">Rajesh Kannan Megalingam</a>, <a href="" target="_blank">Shree Rajesh Raagul Vadivel</a>, <a href="https://www.linkedin.com/in/prasant-kumar-yadav-0a075412a/" target="_blank">Prasant Kumar Yadav</a>, <a href="https://www.linkedin.com/in/nigamkatta/" target="_blank">Nigam Katta</a>, <a href="https://www.linkedin.com/in/ravitejageesala/?originalSubdomain=in" target="_blank">Raviteja Geesala</a>, <a href="https://www.linkedin.com/in/ruthvikchanda/" target="_blank">Ruthvik Rangaiagh Chanda</a> <br><span style="font-style: italic;">Inventive Communication and Computational Technologies </span>, 2020 <br><a href="https://drive.google.com/file/d/19DK3Tah7GFJEDjP5nSMqoTnaB_ZEV84S/view?usp=sharing" target="_blank">Paper</a> /<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#2" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="2"><div class="card card-body"><pre><code>@INPROCEEDINGS{9183013,author={R. K. Megalingam, S. R. R. Vadivel, P. K. Yadav, K. Nigam, R. T. Geesala, R. Chanda},
-              booktitle={2020 Fourth International Conference on Inventive Systems and Control (ICISC)}, 
-              title={Implementation of low-cost mobile robot for rescue challenges}, 
-              year={2020},
-        }</pre></code></div></div> </div> </div> </div>
-
-
-            <div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/p3ss.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://drive.google.com/file/d/1mAZFORDuh-9nKxadf6Td9gJhYn4jiMa_/view?usp=sharing" target="_blank">PID based locomotion of multi-terrain robot using ROS platform</a> <br><a href="https://www.amrita.edu/faculty/rajeshm/" target="_blank">Rajesh Kannan Megalingam</a>, <a href="https://www.linkedin.com/in/deepak-nagalla/" target="_blank">Deepak Nagalla</a>, <a href="https://www.linkedin.com/in/nigamkatta/" target="_blank">Nigam Katta</a>, <a href="https://www.linkedin.com/in/vamsigontu/" target="_blank">Vamsi Gontu</a>,  <a href="https://www.linkedin.com/in/phanindra-kumar-allada/" target="_blank">Phanindra Kumar Alladaa></a> <br><span style="font-style: italic;"> 2020 Fourth International Conference on Inventive Systems and Control (ICISC)</span>, 2020 <br><a href="https://drive.google.com/file/d/1mAZFORDuh-9nKxadf6Td9gJhYn4jiMa_/view?usp=sharing" target="_blank">Paper</a> / <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#3" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="3"><div class="card card-body"><pre><code>@INPROCEEDINGS{9171065, author={Megalingam, Rajesh Kannan, Deepak Nagalla, Nigam Katta, Vamsi Gontu, Phanindra Kumar Allada},
-              booktitle={2020 Fourth International Conference on Inventive Systems and Control (ICISC)}, 
-              title={PID based locomotion of multi-terrain robot using ROS platform}, 
-              year={2020},
-            }</pre></code></div></div> </div> </div> </div>
-
-            <div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/p4ss.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://drive.google.com/file/d/1fPx_xMUXV0ZWywBngoe8U1Zv6I_yfW4G/view?usp=sharing" target="_blank">Keyboard-based control and simulation of 6-DOF robotic arm using ROS</a> <br><a href="https://www.amrita.edu/faculty/rajeshm/" target="_blank">Rajesh Kannan Megalingam</a>, <a href="https://www.linkedin.com/in/nigamkatta/" target="_blank">Nigam Katta</a>, <a href="https://www.linkedin.com/in/ravitejageesala/?originalSubdomain=in" target="_blank">Raviteja Geesala</a>,  <a href="https://www.linkedin.com/in/prasant-kumar-yadav-0a075412a/" target="_blank">Prasant Kumar Yadav</a>, <a href="https://www.linkedin.com/in/ruthvikchanda/" target="_blank">Ruthvik Rangaiagh Chanda</a>, <br><span style="font-style: italic;">2018 4th International Conference on Computing Communication and Automation (ICCCA)</span>, 2018 <br><a href="https://drive.google.com/file/d/1cRg0tcO3cHSInRmH8E6jXEugI1Zg8hfa/view?usp=sharing" target="_blank" id="competitions">Paper</a> / <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#4" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="4"><div class="card card-body"><pre><code>@INPROCEEDINGS{8777578,  author={Rajesh Kannan Megalingam, Nigam Katta, Raviteja Geesala, Prasant Kumar Yadav, Ruthvik Chanda Rangaiah},
-              booktitle={2018 4th International Conference on Computing Communication and Automation (ICCCA)}, 
-              title={Keyboard-based control and simulation of 6-DOF robotic arm using ROS}, 
-              year={2017},
-            }</pre></code></div></div> </div> </div> </div>
-
-            <div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/p5ss.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://drive.google.com/file/d/1cRg0tcO3cHSInRmH8E6jXEugI1Zg8hfa/view?usp=sharing" target="_blank">Swarm based autonomous landmine detecting robots</a> <br><a href="https://www.amrita.edu/faculty/rajeshm/" target="_blank">Rajesh Kannan Megalingam</a>, <a href="https://www.linkedin.com/in/deepak-nagalla/" target="_blank">Deepak Nagalla</a>, <a href="https://www.linkedin.com/in/rp-kiran/" target="_blank">Ravi Kiran Pasumarthi</a>, <a href="https://www.linkedin.com/in/ravitejageesala/?originalSubdomain=in" target="_blank">Raviteja Geesala</a>,<a href="https://www.linkedin.com/in/nigamkatta/" target="_blank">Nigam Katta</a> <br><span style="font-style: italic;">2017 International Conference on Inventive Computing and Informatics (ICICI)</span>, 2018 <br><a href="https://drive.google.com/file/d/1fPx_xMUXV0ZWywBngoe8U1Zv6I_yfW4G/view?usp=sharing" target="_blank" id="competitions">Paper</a> / <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#4" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="4"><div class="card card-body"><pre><code>@INPROCEEDINGS{8777578,  author={Rajesh Kannan Megalingam, Deepak Nagalla, Pasumarthi Ravi Kiran, Ravi Teja Geesala, Katta Nigam},
-              booktitle={2017 International Conference on Inventive Computing and Informatics (ICICI)}, 
-              title={Swarm based autonomous landmine detecting robots}, 
-              year={2017},
-            }</pre></code></div></div> </div> </div> </div>
-
+          <article class="card fade-in-section">
+            <div class="card-media logo-media"><img src="assets/media/logos/multicoreware.svg" alt="MulticoreWare logo" loading="lazy"></div>
+            <div class="card-content">
+              <p class="card-meta">Oct 2020 – Dec 2022</p>
+              <h3>Software Engineer, ADAS</h3>
+              <p>Perception networks for ADAS, an optimized CNN library for CEVA DSP, and a lidar–radar multiple object tracker.</p>
+              <button class="dark-btn explore-btn" type="button">Explore</button>
             </div>
-        </div>
+            <template class="modal-data" data-role="Software Engineer, ADAS" data-org="MulticoreWare Inc · Chennai, India" data-date="Oct 2020 – Dec 2022">
+              <p>Autonomous and Automotive business unit: perception, optimization and tracking for advanced driver-assistance systems.</p>
+              <li>Designed, developed and deployed end-to-end neural networks for ADAS perception, including object detection and trajectory prediction. Managed real-world custom datasets; transfer learning gave a <b>25% accuracy boost</b>.</li>
+              <li>Built CNN architectures (YOLO, U-Net, ResNet) with vectorization and SIMD to create an optimized CNN library for CEVA DSP, achieving a <b>50% FPS increase</b> at the same accuracy.</li>
+              <li>Built an end-to-end multiple object tracker in Matlab using EKF, JPDA and DBSCAN clustering, fusing lidar and radar data for robust scene sensing, with <b>92% real-time accuracy</b>.</li>
+              <li>Converted deployed ML models into APIs reused across multiple projects.</li>
+            </template>
+          </article>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <div class="row" style="margin-top: 1em;">
-            <div class="col-sm-12" style="">
-                <h1 style="margin-bottom: 1.5em">Competitions</h1>
-                      <ul class="competitions__list">
-
-                        <li class="competitions__item">
-                          <a href="https://www.amrita.edu/center/humanitarian-technology-hut-labs/achievements/" target="_blank"><h3 class="competitions__title">World Robot Summit - Japan 2018 🇯🇵</h3></a>
-                          <p class="competitions__description">The World Robot Summit (WRS) is Challenge and Expo of its kind to bring together Robot Excellence from around the world. Out Of 256 professional teams that applied from all over the world, We are the only team from India to qualify for the finals and took part in the "Standard disaster challenge". </p>
-                          <p class="competitions__result_red">Achieved 12th position out of 25 international teams in the Standard disaster challenge in World Robot Summit. Got 1million Yen funding for the project.</p>
-                        </li>
-
-
-                        <li class="competitions__item">
-                          <a href="https://www.amrita.edu/center/humanitarian-technology-hut-labs/achievements/" target="_blank"><h3 class="competitions__title">RoboCup@Home - Germany 2018 🇩🇪</h3></a>
-                          <p class="competitions__description">The RoboCup@Home league aims to develop a robot which would assist fighters in rescuing victims when a natural disaster occur. It is the largest international annual competition for autonomous search and rescue robots. A set of benchmark tests is used to evaluate the robots’ abilities and performance in a realistic non-standardized home natural disaster setting.</p>
-                          <p class="competitions__result_red" id="awards">Qualified for the Finals.</p>
-                        </li>
-                      </ul>
+          <article class="card fade-in-section">
+            <div class="card-media logo-media"><img src="assets/media/logos/amrita.svg" alt="Amrita Vishwa Vidyapeetham logo" loading="lazy"><span class="logo-caption">Humanitarian Technology Labs</span></div>
+            <div class="card-content">
+              <p class="card-meta">Dec 2017 – Aug 2020</p>
+              <h3>Student Researcher</h3>
+              <p>Navigation, speech and computer vision for service and rescue robots; papers and international competitions.</p>
+              <button class="dark-btn explore-btn" type="button">Explore</button>
             </div>
+            <template class="modal-data" data-role="Student Researcher" data-org="Humanitarian Technology Labs, Amrita University · Kerala, India" data-date="Dec 2017 – Aug 2020" data-media="assets/media/rescue.webp">
+              <p>Three years building the software stack for HuT Labs robots: auto-navigation, speech recognition and computer vision.</p>
+              <li>Designed and developed the computer vision interface that assists the robotic arm and supports auto-navigation.</li>
+              <li>Implemented algorithms to detect and recognize objects and obstacles so robots navigate safely and efficiently.</li>
+              <li>Configured mapping, localization and pose estimation with sensor fusion of GPS, lidar and IMU, indoors and outdoors.</li>
+              <li>Integrated robot software with motors and sensors across cross-functional teams, and explored ML techniques for recognition and autonomous decision-making.</li>
+            </template>
+          </article>
+
         </div>
+      </div>
+    </section>
 
+    <!-- ======================= EDUCATION ======================= -->
+    <section class="section" id="education" aria-labelledby="education-heading">
+      <div class="container">
+        <h2 id="education-heading" class="fade-in-section">Education &amp; Research</h2>
+        <div class="card-grid two" data-group="education">
 
-
-
-
-
-
-
-
-
-        <div class="row" style="margin-top: 1em;">
-            <div class="col-sm-12" style="">
-                <h1 style="margin-bottom: 1.5em; margin-top: 2em;">Awards</h1>
-                      <ul class="competitions__list">
-
-                        <li class="competitions__item">
-                          <h4 class="competitions__title_award">Outstanding Student Researcher Award 2019 - Hutlab, Dept of ECE, Amrita University.</h4>
-                        </li>
-
-                        <li class="competitions__item">
-                          <h4 class="competitions__title_award">Outstanding Student Reseacher Award 2019 - HuT Labs.</h4>
-                        </li>
-
-                        <li class="competitions__item">
-                          <h4 class="competitions__title_award">Certificate of Excellence 2019 - 2020 by IEEE Student Branch.</h4>
-                        </li>
-                      </ul>
+          <article class="card fade-in-section">
+            <div class="card-media logo-media"><img src="assets/media/logos/georgia-tech.svg" alt="Georgia Tech logo" loading="lazy"></div>
+            <div class="card-content">
+              <p class="card-meta">M.S. Robotics</p>
+              <h3>Georgia Institute of Technology</h3>
+              <p>Research with the LIDAR group (Dr. Ye Zhao) on socially acceptable navigation for the Digit bipedal robot.</p>
+              <button class="dark-btn explore-btn" type="button">Explore</button>
             </div>
-        </div>
+            <template class="modal-data" data-role="Georgia Institute of Technology" data-org="M.S. Robotics" data-date="Atlanta, USA" data-media="assets/media/digit.webp">
+              <p>Master's in Robotics, focused on perception, localization, tracking and planning.</p>
+              <li><b>Research:</b> social navigation for the Digit humanoid in dynamic crowds, combining Vicon motion-capture human tracking with a zonotope-based model predictive controller.</li>
+              <li><b>Publication:</b> co-author of “Socially Acceptable Bipedal Robot Navigation via Social Zonotope Network Model Predictive Control”, IEEE Transactions on Automation Science and Engineering (2024).</li>
+              <li><b>Course project (7785):</b> Turtlebot3 object following, obstacle avoidance, waypoint navigation and an SVM-guided, PID-controlled maze run in ROS2 and Gazebo.</li>
+            </template>
+          </article>
 
-        <div class="row" style="margin-top: 1em;">
-            <div class="col-sm-12" style="">
-                <h1 style="margin-bottom: 1.5em; margin-top: 2em;">Talks</h1>
-                      <ul class="competitions__list">
-
-                        <li class="competitions__item">
-                          <a href="https://www.youtube.com/watch?v=Hvo4u5PTNeg&t=1833s" target="_blank"><h3 class="competitions__title">Multiple Object tracker Webinar</h3></a>
-                          <h4 class="competitions__title_award">As a part Multicoreware Inc, ADAS domain employee, I have taken a webinar on Multiple Object Tracker. The webinar contains the concepts of entire pipeline of Multiple Object Tracker which uses Extended Kalman Filter, JPDA, and DBSCAN. </h4>
-                        </li>
-
-                        <li class="competitions__item">
-                          <a href="" target="_blank"><h3 class="competitions__title">ROS Workshop</h3></a>
-                          <h4 class="competitions__title_award">As a part IEEE Student board, I have taken up a ROS workshop in Panchadasha International Robotic tech fest.</h4>
-                        </li>
-
-                      </ul>
+          <article class="card fade-in-section">
+            <div class="card-media logo-media"><img src="assets/media/logos/amrita.svg" alt="Amrita Vishwa Vidyapeetham logo" loading="lazy"></div>
+            <div class="card-content">
+              <p class="card-meta">Electronics &amp; Communications</p>
+              <h3>Amrita University</h3>
+              <p>Undergraduate studies and three years at HuT Labs: five papers, World Robot Summit and RoboCup@Home finals.</p>
+              <button class="dark-btn explore-btn" type="button">Explore</button>
             </div>
-        </div>
+            <template class="modal-data" data-role="Amrita University" data-org="Electronics &amp; Communications" data-date="Kerala, India" data-media="assets/media/chetak.webp">
+              <p>Where my passion for robotics began, as a student researcher at Humanitarian Technology Labs (HuT Labs).</p>
+              <li><b>World Robot Summit, Japan 2018:</b> the only team from India among 256 applicants to reach the finals; 12th of 25 international teams in the Standard Disaster Challenge, with ¥1M in project funding.</li>
+              <li><b>RoboCup@Home, Germany 2018:</b> qualified for the finals.</li>
+              <li><b>Outstanding Student Researcher Award 2019</b>, HuT Labs, Dept. of ECE.</li>
+              <li><b>Certificate of Excellence 2019–2020</b>, IEEE Student Branch; ran a ROS workshop at the Panchadasha International Robotics Tech Fest.</li>
+            </template>
+          </article>
 
-        <div class="row" style="margin-top: 3em; margin-bottom: 1em;">
-            
-            <div class="col-sm-12" style="">
-                <h4 class="end">Website template provided by <a href=https://m-niemeyer.github.io/ target="_blank">Michael Niemeyer</a>. Check out his <a href=https://github.com/m-niemeyer/m-niemeyer.github.io target="_blank">github repository </a> for instructions on how to use it! <h4>
-            </div>
-    
         </div>
+      </div>
+    </section>
+
+    <!-- ======================= PUBLICATIONS ======================= -->
+    <section class="section" id="publications" aria-labelledby="publications-heading">
+      <div class="container">
+        <h2 id="publications-heading" class="fade-in-section">Publications &amp; Talks</h2>
+        <div class="pub-grid">
+
+          <article class="pub-card fade-in-section">
+            <div class="pub-media"><img src="assets/media/digit-social-nav.webp" alt="Digit walking through a group of people" loading="lazy" style="object-position:center"></div>
+            <div class="pub-content">
+              <span class="pub-type" data-type="ieee">IEEE T-ASE</span>
+              <h3>Socially Acceptable Bipedal Robot Navigation via Social Zonotope Network Model Predictive Control</h3>
+              <p class="pub-venue">IEEE Transactions on Automation Science and Engineering · 2024</p>
+              <a class="dark-btn" href="https://ieeexplore.ieee.org/abstract/document/10810741/" target="_blank" rel="noopener">View Publication</a>
+            </div>
+          </article>
+
+          <article class="pub-card fade-in-section">
+            <div class="pub-media"><img src="assets/media/pub-ros-nav-hri.webp" alt="" loading="lazy"></div>
+            <div class="pub-content">
+              <span class="pub-type" data-type="journal">Journal</span>
+              <h3>Robot Operating System based Autonomous Navigation Platform with Human-Robot Interaction</h3>
+              <p class="pub-venue">Advances in Science, Technology and Engineering Systems Journal · 2020</p>
+              <a class="dark-btn" href="https://drive.google.com/file/d/1yw3w5XYo1P_WNr17WLIt4v1qVvOI0_dc/view?usp=sharing" target="_blank" rel="noopener">View Publication</a>
+            </div>
+          </article>
+
+          <article class="pub-card fade-in-section">
+            <div class="pub-media"><img src="assets/media/pub-rescue.webp" alt="" loading="lazy" style="object-position:center"></div>
+            <div class="pub-content">
+              <span class="pub-type" data-type="ieee">IEEE</span>
+              <h3>Implementation of Low-Cost Mobile Robot for Rescue Challenges</h3>
+              <p class="pub-venue">Inventive Communication and Computational Technologies · 2020</p>
+              <a class="dark-btn" href="https://drive.google.com/file/d/19DK3Tah7GFJEDjP5nSMqoTnaB_ZEV84S/view?usp=sharing" target="_blank" rel="noopener">View Publication</a>
+            </div>
+          </article>
+
+          <article class="pub-card fade-in-section">
+            <div class="pub-media"><img src="assets/media/pub-multi-terrain.webp" alt="" loading="lazy"></div>
+            <div class="pub-content">
+              <span class="pub-type" data-type="ieee">IEEE</span>
+              <h3>PID Based Locomotion of Multi-Terrain Robot using ROS Platform</h3>
+              <p class="pub-venue">Intl. Conference on Inventive Systems and Control (ICISC) · 2020</p>
+              <a class="dark-btn" href="https://drive.google.com/file/d/1mAZFORDuh-9nKxadf6Td9gJhYn4jiMa_/view?usp=sharing" target="_blank" rel="noopener">View Publication</a>
+            </div>
+          </article>
+
+          <article class="pub-card fade-in-section">
+            <div class="pub-media"><img src="assets/media/pub-arm.webp" alt="" loading="lazy"></div>
+            <div class="pub-content">
+              <span class="pub-type" data-type="ieee">IEEE</span>
+              <h3>Keyboard-Based Control and Simulation of 6-DOF Robotic Arm using ROS</h3>
+              <p class="pub-venue">Intl. Conference on Computing Communication and Automation (ICCCA) · 2018</p>
+              <a class="dark-btn" href="https://drive.google.com/file/d/1fPx_xMUXV0ZWywBngoe8U1Zv6I_yfW4G/view?usp=sharing" target="_blank" rel="noopener">View Publication</a>
+            </div>
+          </article>
+
+          <article class="pub-card fade-in-section">
+            <div class="pub-media"><img src="assets/media/pub-swarm.webp" alt="" loading="lazy"></div>
+            <div class="pub-content">
+              <span class="pub-type" data-type="ieee">IEEE</span>
+              <h3>Swarm Based Autonomous Landmine Detecting Robots</h3>
+              <p class="pub-venue">Intl. Conference on Inventive Computing and Informatics (ICICI) · 2017</p>
+              <a class="dark-btn" href="https://drive.google.com/file/d/1cRg0tcO3cHSInRmH8E6jXEugI1Zg8hfa/view?usp=sharing" target="_blank" rel="noopener">View Publication</a>
+            </div>
+          </article>
+
+          <article class="pub-card fade-in-section">
+            <div class="pub-media"><div class="org-media" style="--org-a:#1d4f91;--org-b:#0b1e3a"><strong>Multiple Object Tracking</strong><span>EKF · JPDA · DBSCAN</span></div></div>
+            <div class="pub-content">
+              <span class="pub-type" data-type="talk">Webinar</span>
+              <h3>Multiple Object Tracker Webinar</h3>
+              <p class="pub-venue">MulticoreWare · ADAS</p>
+              <a class="dark-btn" href="https://www.youtube.com/watch?v=nq-pfK6wO78&t=1380s" target="_blank" rel="noopener">Watch Talk</a>
+            </div>
+          </article>
+
+          <article class="pub-card fade-in-section">
+            <div class="pub-media"><div class="org-media" style="--org-a:#8a1c4a;--org-b:#2a0816"><strong>ROS Workshop</strong><span>IEEE Student Branch</span></div></div>
+            <div class="pub-content">
+              <span class="pub-type" data-type="talk">Workshop</span>
+              <h3>Hands-on ROS Workshop</h3>
+              <p class="pub-venue">Panchadasha International Robotics Tech Fest</p>
+              <p class="pub-note">Taught ROS fundamentals on behalf of the IEEE Student Branch, Amrita University.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= PROJECTS ======================= -->
+    <section class="section" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 id="projects-heading" class="fade-in-section">Projects</h2>
+        <div class="projects-grid">
+
+          <article class="project-card fade-in-section">
+            <div class="project-media"><img src="assets/media/digit-social-nav.webp" alt="Digit navigating among people using SZN-MPC" loading="lazy"><span class="project-tag">Research</span></div>
+            <div class="project-body">
+              <h3>Social Navigation for the Digit Humanoid</h3>
+              <p class="project-subtitle">LIDAR group, Georgia Tech · Dr. Ye Zhao</p>
+              <p class="project-description">Vicon-based human tracking and a zonotope-based model predictive controller that let Digit plan safe, socially acceptable paths among people in real time.</p>
+              <div class="project-links">
+                <a class="dark-btn" href="https://arxiv.org/abs/2406.17151" target="_blank" rel="noopener">Paper</a>
+                <a class="dark-btn" href="https://lab-idar.gatech.edu/socially-aware-bipedal-robot-navigation-through-social-zonotope-network-model-predictive-control" target="_blank" rel="noopener">Project Page</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card fade-in-section">
+            <div class="project-media"><img src="assets/media/collab-slam.webp" alt="Two robots merging their maps" loading="lazy"><span class="project-tag">Multi-robot</span></div>
+            <div class="project-body">
+              <h3>Collaborative Multi-Robot SLAM</h3>
+              <p class="project-subtitle">ROS · gmapping · explore_lite</p>
+              <p class="project-description">Two Turtlebot3 robots explore a Gazebo world autonomously, map it with gmapping, and merge their maps into one detailed representation.</p>
+              <div class="project-links">
+                <a class="dark-btn" href="https://github.com/GutlapalliNikhil/Collaborative_SLAM" target="_blank" rel="noopener">Code</a>
+                <a class="dark-btn" href="https://www.youtube.com/watch?v=Mosx_JfMLIQ" target="_blank" rel="noopener">Demo</a>
+                <a class="dark-btn" href="https://github.com/GutlapalliNikhil/GutlapalliNikhil.github.io/blob/main/files/Group4_FinalReport-3.pdf" target="_blank" rel="noopener">Report</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card fade-in-section">
+            <div class="project-media"><img src="assets/media/complex-yolo.webp" alt="3D object detection on lidar data" loading="lazy"><span class="project-tag">Perception</span></div>
+            <div class="project-body">
+              <h3>Complex-YOLO 3D Object Detection in ROS</h3>
+              <p class="project-subtitle">Complex-YOLOv4 · Lidar · ROS</p>
+              <p class="project-description">Real-time 3D detection and localization of objects from lidar point clouds, integrated into ROS for navigation and obstacle avoidance.</p>
+              <div class="project-links"><a class="dark-btn" href="https://github.com/GutlapalliNikhil/Complex-YOLO-ROS-3D-Object-Detection" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </article>
+
+          <article class="project-card fade-in-section">
+            <div class="project-media"><img src="assets/media/lidar-3d-map.webp" alt="3D map built from a 2D lidar" loading="lazy"><span class="project-tag">Mapping</span></div>
+            <div class="project-body">
+              <h3>3D Mapping with a 2D Lidar</h3>
+              <p class="project-subtitle">ROS · Gazebo · OctoMap</p>
+              <p class="project-description">A custom SolidWorks robot sweeps a 2D lidar from 0° to 60°; a Gazebo plugin turns the scans into point clouds that OctoMap fuses into 3D maps.</p>
+              <div class="project-links"><a class="dark-btn" href="https://github.com/GutlapalliNikhil/3D-Mapping-Using-2D-LiDAR-ROS" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </article>
+
+          <article class="project-card fade-in-section">
+            <div class="project-media"><img src="assets/media/rescue.webp" alt="Search and rescue robot on a disaster course" loading="lazy"><span class="project-tag">HuT Labs</span></div>
+            <div class="project-body">
+              <h3>Autonomous Search and Rescue Robot</h3>
+              <p class="project-subtitle">ROS · 2D/3D SLAM · CNN detection</p>
+              <p class="project-description">Led the software team: control architecture, 2D/3D SLAM, arm pick-and-place, GUI, and CNN detection of hazard signs, fire and people.</p>
+              <div class="project-links">
+                <a class="dark-btn" href="https://github.com/NigamKatta/RescueRobot/tree/main" target="_blank" rel="noopener">Code</a>
+                <a class="dark-btn" href="https://www.youtube.com/watch?v=qSWeLO4bYwI" target="_blank" rel="noopener">Video</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card fade-in-section">
+            <div class="project-media"><img class="contain" src="assets/media/chetak.webp" alt="CHETAK home service robot" loading="lazy"><span class="project-tag">HuT Labs</span></div>
+            <div class="project-body">
+              <h3>CHETAK: Home Service Robot</h3>
+              <p class="project-subtitle">Assistive robotics · ROS · 6-DOF arm</p>
+              <p class="project-description">Helps people with disabilities: object vision, speech commands, autonomous navigation with obstacle avoidance, and pick-and-place with a 6-DOF arm.</p>
+              <div class="project-links">
+                <a class="dark-btn" href="https://github.com/GutlapalliNikhil/Install_Speech_Navigation" target="_blank" rel="noopener">Code</a>
+                <a class="dark-btn" href="https://www.youtube.com/watch?v=1iNSb_AOZIM" target="_blank" rel="noopener">Demo</a>
+                <a class="dark-btn" href="https://amrita.edu/project/service-robot" target="_blank" rel="noopener">More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card extra-project fade-in-section">
+            <div class="project-media"><img src="assets/media/maze.webp" alt="Turtlebot navigating a maze" loading="lazy"><span class="project-tag">Course project</span></div>
+            <div class="project-body">
+              <h3>SVM-Guided Maze Navigation</h3>
+              <p class="project-subtitle">ROS2 · Gazebo · SVM · PID</p>
+              <p class="project-description">Turtlebot3 object following, obstacle avoidance and waypoint navigation, ending in a maze run guided by an SVM sign classifier and PID control.</p>
+            </div>
+          </article>
+
+          <article class="project-card extra-project fade-in-section">
+            <div class="project-media"><img src="assets/media/stetro.webp" alt="sTetro staircase-cleaning robot" loading="lazy"><span class="project-tag">Robot control</span></div>
+            <div class="project-body">
+              <h3>sTetro: Staircase-Cleaning Robot</h3>
+              <p class="project-subtitle">PID · IMU · YOLOv3</p>
+              <p class="project-description">The staircase motion controller: encoder- and IMU-based PID control across surfaces, plus CNN/YOLOv3 stair detection for autonomous climbing.</p>
+              <div class="project-links"><a class="dark-btn" href="https://github.com/NigamKatta/sTETRO/tree/main" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </article>
+
+          <article class="project-card extra-project fade-in-section">
+            <div class="project-media"><img class="contain" src="assets/media/kalman.webp" alt="Kalman filter position estimates" loading="lazy"><span class="project-tag">Estimation</span></div>
+            <div class="project-body">
+              <h3>State Estimation with the Kalman Family</h3>
+              <p class="project-subtitle">CV · CA · CVH motion models</p>
+              <p class="project-description">Kalman filters with constant-velocity, constant-acceleration and constant-velocity-and-heading models, evaluated on simulated sensor data.</p>
+            </div>
+          </article>
+
+          <article class="project-card extra-project fade-in-section">
+            <div class="project-media"><img class="contain" src="assets/media/pointnet.webp" alt="Classified point clouds" loading="lazy"><span class="project-tag">3D deep learning</span></div>
+            <div class="project-body">
+              <h3>Point Cloud Classification (PointNet)</h3>
+              <p class="project-subtitle">PyTorch · ModelNet · ScanObjectNN</p>
+              <p class="project-description">PointNet for 3D point cloud classification, with dataset preprocessing, training and visualization from a command-line interface.</p>
+              <div class="project-links"><a class="dark-btn" href="https://github.com/GutlapalliNikhil/Pointcloud-Classification-Pytorch" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </article>
+
+          <article class="project-card extra-project fade-in-section">
+            <div class="project-media"><img src="assets/media/vit.webp" alt="Image classification samples" loading="lazy"><span class="project-tag">Deep learning</span></div>
+            <div class="project-body">
+              <h3>Image Classification with a Pretrained ViT</h3>
+              <p class="project-subtitle">Vision Transformer · Transfer learning</p>
+              <p class="project-description">Fine-tuned a pretrained Vision Transformer for a custom image classification task, reaching high validation accuracy.</p>
+              <div class="project-links"><a class="dark-btn" href="https://github.com/GutlapalliNikhil/ImageClassification_VIT_TransferLearning" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </article>
+
+        </div>
+        <div class="toggle-wrap">
+          <button class="outline-btn" id="projects-toggle" type="button" aria-expanded="false">View All Projects</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= SKILLS ======================= -->
+    <section class="section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <h2 id="skills-heading" class="fade-in-section">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-item fade-in-section"><div class="skill-icon"><svg class="icon"><use href="#i-code"/></svg></div><h3>Languages</h3><p>C++, Python, CUDA, Matlab</p></div>
+          <div class="skill-item fade-in-section"><div class="skill-icon"><svg class="icon"><use href="#i-nodes"/></svg></div><h3>ROS 2 &amp; Middleware</h3><p>ROS, ROS 2, MCAP, streaming pipelines</p></div>
+          <div class="skill-item fade-in-section"><div class="skill-icon"><svg class="icon"><use href="#i-eye"/></svg></div><h3>Computer Vision</h3><p>Detection, tracking, point clouds, radar imaging</p></div>
+          <div class="skill-item fade-in-section"><div class="skill-icon"><svg class="icon"><use href="#i-layers"/></svg></div><h3>Deep Learning</h3><p>PyTorch, YOLO, PointNet, ViT</p></div>
+          <div class="skill-item fade-in-section"><div class="skill-icon"><svg class="icon"><use href="#i-map"/></svg></div><h3>SLAM &amp; Estimation</h3><p>EKF, JPDA, Kalman filters, gmapping, OctoMap</p></div>
+          <div class="skill-item fade-in-section"><div class="skill-icon"><svg class="icon"><use href="#i-window"/></svg></div><h3>Tooling &amp; Visualization</h3><p>Qt, real-time 3D rendering, annotation tools</p></div>
+          <div class="skill-item fade-in-section"><div class="skill-icon"><svg class="icon"><use href="#i-chip"/></svg></div><h3>Embedded &amp; Real-time</h3><p>Multi-threading, SIMD, DSP optimization</p></div>
+          <div class="skill-item fade-in-section"><div class="skill-icon"><svg class="icon"><use href="#i-radar"/></svg></div><h3>Sensor Fusion</h3><p>Lidar, radar, IMU, GPS, terahertz sensors</p></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================= CONTACT ======================= -->
+  <footer class="section" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="footer-container">
+        <h2 id="contact-heading" class="fade-in-section">Contact</h2>
+        <p class="contact-subheading fade-in-section" style="--fade-delay:0.1s">Let's build sensors and robots that see clearly.</p>
+        <p class="personal-note fade-in-section" style="--fade-delay:0.2s">I enjoy working where hardware meets software: sensor data pipelines, perception and robotics middleware. If you are working on something similar, I would love to hear from you.</p>
+        <a class="email-link fade-in-section" href="mailto:nigamkatta@gmail.com">nigamkatta@gmail.com</a>
+        <div class="social-icons fade-in-section">
+          <a href="https://www.linkedin.com/in/nigamkatta/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a href="https://github.com/NigamKatta" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg>
+          </a>
+          <a href="https://scholar.google.com/citations?user=WAjjOOwAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.24 13.77 0 9.5 12 0l12 9.5-5.24 4.27A7.5 7.5 0 0 0 12 9.5c-2.98 0-5.55 1.75-6.76 4.27zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+          </a>
+        </div>
+        <p class="credit fade-in-section">
+          © <span id="year">2026</span> Nigam Katta · Design adapted from <a href="https://github.com/stevenf7/stevenf7.github.io" target="_blank" rel="noopener">Steven Feng's open-source site</a>
+        </p>
+      </div>
     </div>
-			
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"></script>
-			
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KKH6VE3K25"></script>
-    <script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
+  </footer>
 
-	gtag('config', 'G-KKH6VE3K25');
-    </script>
+  <!-- Detail modal used by the Experience and Education cards -->
+  <dialog class="modal" id="detail-modal" aria-labelledby="modal-role">
+    <div class="modal-topbar">
+      <span class="modal-org"></span>
+      <div class="modal-actions">
+        <span class="modal-counter"></span>
+        <button class="modal-close" type="button" aria-label="Close">&times;</button>
+      </div>
+    </div>
+    <div class="modal-heading">
+      <h2 id="modal-role" tabindex="-1" autofocus></h2>
+      <p class="modal-date"></p>
+      <p class="modal-summary"></p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-media"><img alt=""></div>
+      <div class="modal-highlights">
+        <h3>Highlights</h3>
+        <ol></ol>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-nav" type="button" data-step="-1">&#8249; Previous</button>
+      <button class="modal-nav" type="button" data-step="1">Next &#8250;</button>
+    </div>
+  </dialog>
+
+  <script src="assets/js/site.js"></script>
 </body>
 
 </html>
-    

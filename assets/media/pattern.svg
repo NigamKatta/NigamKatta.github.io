@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="300" viewBox="0 0 360 300" fill="none" stroke="#1e293b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- robot head -->
+  <g transform="translate(34 30) rotate(-8)">
+    <rect x="0" y="12" width="48" height="38" rx="10"/>
+    <circle cx="15" cy="31" r="5"/>
+    <circle cx="33" cy="31" r="5"/>
+    <path d="M24 12V3M19 3h10M-6 25v12M54 25v12M16 43h16"/>
+  </g>
+  <!-- robot arm -->
+  <g transform="translate(210 18) rotate(10)">
+    <path d="M0 80h44M22 80V66"/>
+    <circle cx="22" cy="62" r="5"/>
+    <path d="M25 58l20-28"/>
+    <circle cx="47" cy="27" r="5"/>
+    <path d="M52 27l26 8"/>
+    <path d="M78 35l8-8M78 35l8 8"/>
+  </g>
+  <!-- quadcopter -->
+  <g transform="translate(118 150) rotate(14)">
+    <path d="M12 12l36 26M48 12L12 38"/>
+    <rect x="22" y="18" width="16" height="14" rx="4"/>
+    <ellipse cx="12" cy="12" rx="11" ry="3"/>
+    <ellipse cx="48" cy="12" rx="11" ry="3"/>
+    <ellipse cx="12" cy="38" rx="11" ry="3"/>
+    <ellipse cx="48" cy="38" rx="11" ry="3"/>
+  </g>
+  <!-- rover with lidar -->
+  <g transform="translate(250 190) rotate(-6)">
+    <rect x="0" y="16" width="62" height="24" rx="6"/>
+    <circle cx="12" cy="46" r="8"/>
+    <circle cx="50" cy="46" r="8"/>
+    <rect x="24" y="6" width="14" height="10" rx="3"/>
+    <path d="M42 4a10 10 0 0 1 8 6M44 0a16 16 0 0 1 12 10"/>
+  </g>
+  <!-- radar sweep -->
+  <g transform="translate(20 200)">
+    <path d="M0 60a60 60 0 0 1 60-60"/>
+    <path d="M18 60a42 42 0 0 1 42-42"/>
+    <path d="M36 60a24 24 0 0 1 24-24"/>
+    <path d="M60 60L22 22"/>
+    <circle cx="60" cy="60" r="3"/>
+  </g>
+  <!-- chip -->
+  <g transform="translate(300 110) rotate(20)">
+    <rect x="6" y="6" width="28" height="28" rx="4"/>
+    <rect x="14" y="14" width="12" height="12" rx="2"/>
+    <path d="M14 0v6M26 0v6M14 34v6M26 34v6M0 14h6M0 26h6M34 14h6M34 26h6"/>
+  </g>
+</svg>
