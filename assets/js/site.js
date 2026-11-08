@@ -35,6 +35,14 @@
     setTimeout(tick, 1800);
   }
 
+  // ---------- Hero video: no autoplay for reduced-motion users ----------
+  var heroVideo = document.getElementById('hero-video');
+  if (heroVideo && reduceMotion) {
+    heroVideo.removeAttribute('autoplay');
+    heroVideo.pause();
+    heroVideo.controls = true;
+  }
+
   // ---------- Reveal on scroll ----------
   var reveals = document.querySelectorAll('.fade-in-section');
   if ('IntersectionObserver' in window) {
