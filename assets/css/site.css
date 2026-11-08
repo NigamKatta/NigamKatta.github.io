@@ -488,3 +488,7 @@ html.js .fade-in-section.is-visible { animation: fade-in-up 0.6s ease-out var(--
   .hero-role { font-size: 1.25rem; }
   .nav-link { padding: 5px 8px; font-size: 0.82rem; }
 }
+
+/* Peer review still underway */
+.tag.tag-progress { background: rgba(217, 119, 6, 0.14); color: #b45309; }
+[data-theme="dark"] .tag.tag-progress { background: rgba(251, 191, 36, 0.16); color: #fbbf24; }
