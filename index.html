@@ -85,7 +85,9 @@
     <!-- ======================= HERO ======================= -->
     <section class="section" id="home" aria-label="Nigam Katta">
       <div class="hero">
-        <div class="hero-inner">
+        <video class="hero-bg-video" id="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/media/hero-digit-poster.webp" aria-hidden="true">
+          <source src="assets/media/hero-digit.mp4" type="video/mp4">
+        </video>
         <div class="hero-content">
           <img class="hero-avatar hero-fade" src="assets/media/avatar.webp" alt="Nigam Katta" width="92" height="92">
           <h1 class="hero-name hero-fade" style="--fade-delay:0.1s">Hi, I'm Nigam Katta</h1>
@@ -100,17 +102,7 @@
             <a class="secondary-btn" href="https://drive.google.com/file/d/1Ir6J-VXIbzwDS0gv8qZXGH4XBm-O5GuF/view?usp=drive_link" target="_blank" rel="noopener">View Resume</a>
             <a class="secondary-btn" href="https://www.linkedin.com/in/nigamkatta/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
-        </div>
-        <figure class="hero-media hero-fade" style="--fade-delay:0.25s">
-          <video id="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/media/hero-digit-poster.webp"
-                 aria-label="The Digit humanoid robot walking through a group of people while its planner predicts their motion">
-            <source src="assets/media/hero-digit.mp4" type="video/mp4">
-          </video>
-          <figcaption>
-            <span>Digit humanoid navigating a crowd with Social Zonotope Network MPC · Georgia Tech LIDAR Lab</span>
-            <a href="files/papers/2024-tase-social-zonotope-bipedal-navigation-arxiv.pdf" target="_blank" rel="noopener">IEEE T-ASE paper →</a>
-          </figcaption>
-        </figure>
+          <p class="hero-credit hero-fade" style="--fade-delay:0.5s">Background: Digit humanoid navigating a crowd with Social Zonotope Network MPC · <a href="files/papers/2024-tase-social-zonotope-bipedal-navigation-arxiv.pdf" target="_blank" rel="noopener">IEEE T-ASE paper</a></p>
         </div>
       </div>
     </section>

@@ -35,12 +35,11 @@
     setTimeout(tick, 1800);
   }
 
-  // ---------- Hero video: no autoplay for reduced-motion users ----------
+  // ---------- Hero background video: hold on the poster frame for reduced-motion users ----------
   var heroVideo = document.getElementById('hero-video');
   if (heroVideo && reduceMotion) {
     heroVideo.removeAttribute('autoplay');
     heroVideo.pause();
-    heroVideo.controls = true;
   }
 
   // ---------- Reveal on scroll ----------
